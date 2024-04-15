@@ -115,7 +115,8 @@ services:
         ipv4_address: ${MINIO_NETWORK_ADDRESS:-172.28.0.6}
 
   openim-server:
-    image: ${IMAGE_REGISTRY:-ghcr.io/openimsdk}/openim-server:${SERVER_IMAGE_VERSION:-latest}
+    # image: ${IMAGE_REGISTRY:-ghcr.io/openimsdk}/openim-server:${SERVER_IMAGE_VERSION:-latest}
+    image: ghcr.io/kyleye/g-open-im-server:sha-4da3bd6@sha256:65e2cf52596349d936f4b4945fe645c385070928592b86f29f4c99bc45c3d74c
     container_name: openim-server
     ports:
       - "${OPENIM_WS_PORT:-10001}:${OPENIM_WS_PORT:-10001}"
